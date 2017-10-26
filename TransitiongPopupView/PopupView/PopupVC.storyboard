@@ -17,33 +17,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5M7-1J-yjY">
-                                <rect key="frame" x="49" y="147" width="276" height="372"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5M7-1J-yjY">
+                                <rect key="frame" x="49" y="147" width="272" height="372"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Something happened, fill in your owne messages here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUw-2f-3ik">
-                                        <rect key="frame" x="40" y="148" width="197" height="76"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acl-4J-ln3">
-                                        <rect key="frame" x="31" y="322" width="215" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.1176470588" green="0.54901960780000003" blue="0.87687015530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="close">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="closeView:" destination="aeC-ps-vJ3" eventType="touchUpInside" id="Hnv-L4-7tz"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Hyp-lC-sCf">
+                                        <rect key="frame" x="28.5" y="61.5" width="215" height="249"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something happened, fill in your own messages here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUw-2f-3ik">
+                                                <rect key="frame" x="0.0" y="0.0" width="215" height="157"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="157" id="c7i-Gx-wPU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acl-4J-ln3">
+                                                <rect key="frame" x="0.0" y="207" width="215" height="42"/>
+                                                <color key="backgroundColor" red="0.1176470588" green="0.54901960780000003" blue="0.87687015530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="nBw-vF-IOf"/>
+                                                    <constraint firstAttribute="width" constant="215" id="ytS-qP-MoU"/>
+                                                </constraints>
+                                                <state key="normal" title="close">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="closeView:" destination="aeC-ps-vJ3" eventType="touchUpInside" id="Hnv-L4-7tz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Hyp-lC-sCf" firstAttribute="centerX" secondItem="5M7-1J-yjY" secondAttribute="centerX" id="BNv-mK-sUG"/>
+                                    <constraint firstItem="Hyp-lC-sCf" firstAttribute="leading" secondItem="5M7-1J-yjY" secondAttribute="leading" constant="28.5" id="QLu-Uf-xVo"/>
+                                    <constraint firstItem="Hyp-lC-sCf" firstAttribute="top" secondItem="5M7-1J-yjY" secondAttribute="top" constant="61.5" id="caK-IH-5AF"/>
+                                    <constraint firstItem="Hyp-lC-sCf" firstAttribute="centerY" secondItem="5M7-1J-yjY" secondAttribute="centerY" id="obL-al-WOb"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5M7-1J-yjY" firstAttribute="top" secondItem="Sow-xr-I9F" secondAttribute="top" constant="127" id="DSM-Qk-987"/>
+                            <constraint firstItem="5M7-1J-yjY" firstAttribute="leading" secondItem="Sow-xr-I9F" secondAttribute="leading" constant="49" id="PJa-21-1Rj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Sow-xr-I9F"/>
                     </view>
                     <connections>
@@ -55,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EW1-3D-HIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.5" y="111.5"/>
+            <point key="canvasLocation" x="47.200000000000003" y="111.0944527736132"/>
         </scene>
     </scenes>
 </document>
