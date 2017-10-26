@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupViewController" customModule="TransitiongPopupView" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="f1x-uV-AAs" id="Xru-HL-Uhv"/>
+                <outlet property="view" destination="054-Pd-5tF" id="mCq-5x-tUW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController title="PopupVIewController" nibName="PopupViewController" id="lX4-0e-eyR" customClass="PopupViewController" customModule="TransitiongPopupView" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="054-Pd-5tF">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLW-IO-byQ">
+                        <rect key="frame" x="49" y="147" width="276" height="372"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Something happened, fill in your owne messages here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llr-JC-y32">
+                                <rect key="frame" x="40" y="148" width="197" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1x-uV-AAs">
+                                <rect key="frame" x="31" y="322" width="215" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.54901960780000003" blue="0.87687015530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeView:" destination="lX4-0e-eyR" eventType="touchUpInside" id="KID-Kx-Xnd"/>
+                                    <action selector="closeView:" destination="-1" eventType="touchUpInside" id="cbm-hl-LvX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <viewLayoutGuide key="safeArea" id="vnq-Nr-DBX"/>
+            </view>
+            <connections>
+                <outlet property="closeButton" destination="f1x-uV-AAs" id="bCd-1L-2YI"/>
+                <outlet property="containerView" destination="054-Pd-5tF" id="uvp-Tp-DyH"/>
+                <outlet property="messageLabel" destination="llr-JC-y32" id="XQv-Y7-B0D"/>
+                <outlet property="popupView" destination="GLW-IO-byQ" id="1Wc-YI-AFj"/>
+            </connections>
+            <point key="canvasLocation" x="47.5" y="111.5"/>
+        </viewController>
+    </objects>
+</document>
